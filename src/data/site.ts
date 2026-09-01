@@ -14,8 +14,12 @@ export const SITE = {
   email: "hello@atriumestates.com",
   address: "Strandveien 12, Oslo, Norway",
   motto: "Minimalism. Nature. Architecture.",
-  /** Used for canonical URLs, sitemap and Open Graph tags. */
-  url: "https://atrium-estates.vercel.app",
+  /**
+   * Used for canonical URLs, the sitemap and Open Graph tags. Set
+   * NEXT_PUBLIC_SITE_URL in the deployment environment once the real domain is
+   * known — otherwise these all point at the fallback below.
+   */
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://atrium-estates.vercel.app",
   social: {
     instagram: "https://instagram.com",
     facebook: "https://facebook.com",

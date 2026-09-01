@@ -70,6 +70,11 @@ component to change what the site says.
 | Menu structure | `src/data/navigation.ts` |
 | Colours, type scale, spacing rules | `src/app/globals.css` and `DESIGN.md` |
 
+Set `NEXT_PUBLIC_SITE_URL` in the deployment environment (Vercel → Settings →
+Environment Variables) to the site's real domain. Canonical URLs, the sitemap
+and Open Graph tags all read from it; without it they fall back to a
+placeholder domain.
+
 Photography lives in `public/images/` as WebP. Any listing without a photo falls
 back to an on-brand gradient scene rather than breaking the grid.
 
